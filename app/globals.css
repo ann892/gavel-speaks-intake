@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-gray-900;
+  }
+}
+
+@layer components {
+  .prose-custom {
+    @apply text-gray-700 leading-relaxed;
+  }
+
+  .prose-custom h2 {
+    @apply text-2xl font-bold text-gavel-dark mt-6 mb-3;
+  }
+
+  .prose-custom h3 {
+    @apply text-lg font-semibold text-gavel-dark mt-4 mb-2;
+  }
+
+  .prose-custom p {
+    @apply mb-3;
+  }
+
+  .prose-custom ul {
+    @apply ml-4 mb-3 space-y-1;
+  }
+
+  .prose-custom li {
+    @apply list-disc ml-4;
+  }
+}
+
+/* Calendly Widget Styling */
+.calendly-inline-widget {
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none;
+  }
+
+  body {
+    background-color: white;
+  }
+}
